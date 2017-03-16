@@ -209,7 +209,7 @@
         },
         {
             "name": "convertCADFile",
-            "description": "Convert any of the 51 supported formats into .stl, .obj, .dae or .ply formats. Supported formats: .stl, .obj, .3ds, .ac, .ac3d, .acc, .ase, .ask, .b3d, .blend, .bvh, .cob, .csm, .dae, .dxf, .enff, .hmp, .ifc, .irr, .irrmesh, .lwo,.lws, .lxo, .m3, .md2, .md3, .md5anim, .md5camera, .md5mesh, .mdc, .mdl, .mesh.xml, .mot, .ms3d, .ndo, .nff, .obj, .off, .pk3, .ply, .prj, .q3o, .q3s, .raw, .scn, .smd, .vta, .x, .xgl, .xml, .zgl",
+            "description": "Convert any of the 51 supported formats into .stl, .obj, .dae or .ply formats.",
             "args": [
                 {
                     "name": "apiKey",
