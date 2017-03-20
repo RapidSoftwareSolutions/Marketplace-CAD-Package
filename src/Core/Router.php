@@ -270,15 +270,15 @@ class Router
                 continue;
             }
             // Convert numeric in Numeric type
-            if(is_numeric($paramVal)){
-                $paramVal = intval($paramVal);
-            }
+            if(is_numeric($paramVal)) $paramVal = intval($paramVal);
+
             // Convert boolean in Boolean type
             if($paramVal=='true') $paramVal = true;
             if($paramVal=='false') $paramVal = false;
+
             // Substitution using dictionary
             $finalParamName = $paramName;
-            if(count($dictionary)>0 && $paramVal != false && isset($dictionary[$paramName])) {
+            if(isset($dictionary[$paramName])) {
                 $finalParamName = $dictionary[$paramName];
             }
             $result[$finalParamName] = $paramVal;
@@ -304,6 +304,7 @@ class Router
             }
 
             $clientSetup['multipart'] = $sendBody;
+            $clientSetup['allow_redirects'] = false;
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
