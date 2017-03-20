@@ -46,40 +46,6 @@
             ]
         },
         {
-            "name": "getCADModelParameters",
-            "description": "Get information about 3D file, like boxarea, volume, xCenter, yCenter, zCenter.",
-            "args": [
-                {
-                    "name": "apiKey",
-                    "type": "credentials",
-                    "info": "Your Public key.",
-                    "required": true
-                },
-                {
-                    "name": "fileUrl",
-                    "type": "String",
-                    "info": "Flle url for fix.",
-                    "required": true
-                },
-                {
-                    "name": "unit",
-                    "type": "String",
-                    "info": "Unit of the design. One of: mm, in.",
-                    "required": true
-                }
-            ],
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
             "name": "editCADModel",
             "description": "Allows you to rotate, mirror, scale your model.",
             "args": [
@@ -194,40 +160,6 @@
                     "type": "Number",
                     "info": "Angle to rotate the entire mesh about the z axis by the given number of degrees.",
                     "required": false
-                }
-            ],
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
-            "name": "convertCADFile",
-            "description": "Convert any of the 51 supported formats into .stl, .obj, .dae or .ply formats.",
-            "args": [
-                {
-                    "name": "apiKey",
-                    "type": "credentials",
-                    "info": "Your Public key.",
-                    "required": true
-                },
-                {
-                    "name": "fileUrl",
-                    "type": "String",
-                    "info": "Flle url for fix.",
-                    "required": true
-                },
-                {
-                    "name": "fileFormat",
-                    "type": "String",
-                    "info": "File format to convert file into. One of: .stl, .dae, .ply, .obj.",
-                    "required": true
                 }
             ],
             "callbacks": [

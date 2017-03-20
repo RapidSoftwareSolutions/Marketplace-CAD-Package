@@ -34,6 +34,7 @@ return array (
                 ),
             ),
         ),
+        /*
         array (
             'name' => 'getCADModelParameters',
             'description' => 'Get information about 3D file, like boxarea, volume, xCenter, yCenter, zCenter.',
@@ -58,6 +59,7 @@ return array (
                 ),
             ),
         ),
+        */
         array (
             'name' => 'editCADModel',
             'description' => 'Allows you to rotate, mirror, scale your model.',
@@ -166,6 +168,7 @@ return array (
                 ),
             ),
         ),
+        /*
         array (
             'name' => 'convertCADFile',
             'description' => 'Convert any of the 51 supported formats into .stl, .obj, .dae or .ply formats.',
@@ -190,6 +193,7 @@ return array (
                 ),
             ),
         ),
+        */
         array (
             'name' => 'get3DPrintingMaterials',
             'description' => 'Return list of materials types.',
@@ -248,6 +252,7 @@ return array (
             'vendorUrl' => 'https://api.cad.ai/api/v1/repairfile',
             'method' => 'POST',
         ),
+        /*
         'getCADModelParameters' => array (
             'dictionary' => array (
                 'apiKey' => 'apiKey',
@@ -257,6 +262,7 @@ return array (
             'vendorUrl' => 'https://api.cad.ai/api/v1/fileinfo',
             'method' => 'POST',
         ),
+        */
         'editCADModel' => array (
             'dictionary' => array (
                 'apiKey' => 'apiKey',
@@ -285,6 +291,7 @@ return array (
             'vendorUrl' => 'https://api.cad.ai/api/v1/thumbnail',
             'method' => 'POST',
         ),
+        /*
         'convertCADFile' => array (
             'dictionary' => array (
                 'apiKey' => 'apiKey',
@@ -294,6 +301,7 @@ return array (
             'vendorUrl' => 'https://api.cad.ai/api/v1/convertfile',
             'method' => 'POST',
         ),
+        */
         'get3DPrintingMaterials' => array (
             'dictionary' => array (
                 'apiKey' => 'apiKey',

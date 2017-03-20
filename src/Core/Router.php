@@ -209,7 +209,7 @@ class Router
             $param = [];
             // Check input param in param list
             foreach($paramList as $oneParam){
-                $param[$oneParam] = (isset($jsonParam[$oneParam]))?$jsonParam[$oneParam]:false;
+                $param[$oneParam] = (isset($jsonParam[$oneParam]))?$jsonParam[$oneParam]:null;
             }
 
             return $param;
@@ -266,10 +266,16 @@ class Router
     {
         $result = [];
         foreach($inputParam as $paramName => $paramVal){
+            if($paramVal == null){
+                continue;
+            }
             // Convert numeric in Numeric type
             if(is_numeric($paramVal)){
                 $paramVal = intval($paramVal);
             }
+            // Convert boolean in Boolean type
+            if($paramVal=='true') $paramVal = true;
+            if($paramVal=='false') $paramVal = false;
             // Substitution using dictionary
             $finalParamName = $paramName;
             if(count($dictionary)>0 && $paramVal != false && isset($dictionary[$paramName])) {
